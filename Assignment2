@@ -1,0 +1,127 @@
+Q1: 1. List the directory contents date wise sorted. ( man ls)
+
+Answer:  sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os/day01$ ls -lrt /home/sunbeam/CDAC/
+total 36
+drwxrwxr-x  3 sunbeam sunbeam 4096 Mar 13 17:04 CPP_Assignment
+drwxrwxr-x  5 sunbeam sunbeam 4096 Apr  1 15:12 dbt
+drwxrwxr-x  6 sunbeam sunbeam 4096 Apr  1 15:12 cpp
+drwxrwxr-x  3 sunbeam sunbeam 4096 Apr  1 18:11 DBT_Assignment
+drwxrwxr-x  3 sunbeam sunbeam 4096 Apr  2 17:25 WPT_Assignment
+drwxrwxr-x 15 sunbeam sunbeam 4096 Apr 11 14:49 wpt
+drwxrwxr-x 13 sunbeam sunbeam 4096 Apr 20 08:26 mern
+-rw-rw-r--  1 sunbeam sunbeam  811 May 31 18:10 format
+drwxrwxr-x  7 sunbeam sunbeam 4096 Jun  1 18:27 os
+
+Q2. List the directory contents size wise sorted.(man ls)
+
+Answer:  sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os/day01$ ls -lSh /home/sunbeam/CDAC/
+total 36K
+drwxrwxr-x  6 sunbeam sunbeam 4.0K Apr  1 15:12 cpp
+drwxrwxr-x  3 sunbeam sunbeam 4.0K Mar 13 17:04 CPP_Assignment
+drwxrwxr-x  5 sunbeam sunbeam 4.0K Apr  1 15:12 dbt
+drwxrwxr-x  3 sunbeam sunbeam 4.0K Apr  1 18:11 DBT_Assignment
+drwxrwxr-x 13 sunbeam sunbeam 4.0K Apr 20 08:26 mern
+drwxrwxr-x  7 sunbeam sunbeam 4.0K Jun  1 18:27 os
+drwxrwxr-x 15 sunbeam sunbeam 4.0K Apr 11 14:49 wpt
+drwxrwxr-x  3 sunbeam sunbeam 4.0K Apr  2 17:25 WPT_Assignment
+-rw-rw-r--  1 sunbeam sunbeam  811 May 31 18:10 format
+
+
+Q3.  List directory contents along with their inode no. (man
+ls)
+
+Answer: sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os/day01$ ls -l -i /home/sunbeam/CDAC/
+total 36
+4592064 drwxrwxr-x  6 sunbeam sunbeam 4096 Apr  1 15:12 cpp
+4603252 drwxrwxr-x  3 sunbeam sunbeam 4096 Mar 13 17:04 CPP_Assignment
+4609923 drwxrwxr-x  5 sunbeam sunbeam 4096 Apr  1 15:12 dbt
+4610631 drwxrwxr-x  3 sunbeam sunbeam 4096 Apr  1 18:11 DBT_Assignment
+4635487 -rw-rw-r--  1 sunbeam sunbeam  811 May 31 18:10 format
+4588116 drwxrwxr-x 13 sunbeam sunbeam 4096 Apr 20 08:26 mern
+5930044 drwxrwxr-x  7 sunbeam sunbeam 4096 Jun  1 18:27 os
+4589827 drwxrwxr-x 15 sunbeam sunbeam 4096 Apr 11 14:49 wpt
+4590025 drwxrwxr-x  3 sunbeam sunbeam 4096 Apr  2 17:25 WPT_Assignment
+
+
+Q4. List the contents of the subdirectory.
+
+Answer:
+
+
+Q5.  Create a file, write your surname and name in it and
+save.
+i. now open the same file and add your address in it and
+save.
+ii. reopen the same file and check your name and address in
+it.
+
+Answer:   sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ cat >> sush.txt
+Sushmita Bose 
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ cat >> sush.txt
+Shastri Ward Bhandara
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ cat sush.txt
+
+Sushmita Bose 
+Shastri Ward Bhandara
+
+
+
+Q6. how to change the time stamp of file (man touch)
+
+Answer: sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ touch -t 202106231255 sush.txt
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ ls -l sush.txt
+-rw-rw-r-- 1 sunbeam sunbeam 38 Jun 23  2021 sush.txt
+  
+
+
+Q7.  Create directory structure : Give following commands ,
+-> mkdir one
+-> cd one
+-> touch 1.txt 11.txt 111.txt
+-> mkdir two
+-> cd two
+-> touch 2.txt 22.txt 222.txt
+-> mkdir three
+-> cd three
+-> touch 3.txt 33.txt 333.txt
+-> mkdir four
+-> cd four
+-> touch 4.txt 44.txt 444.txt
+-> mkdir five
+-> cd five
+-> touch 5.txt 55.txt 555.txt
+-> cd ~ (i.e. go to your home directory)
+
+Answer:  sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~$ mkdir one
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~$ cd one
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one$ pwd
+/home/sunbeam/one
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one$ touch 1.txt 11.txt 111.txt
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one$ mkdir two
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one$ cd two
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two$ touch 2.txt 22.txt 222.txt
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two$ mkdir three
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two$ cd three
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three$ touch 3.txt 33.txt 333.txt
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three$ mkdir four
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three$ cd four
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three/four$ touch 4.txt 44.txt 444.txt
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three/four$ mkdir five
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three/four$ cd five
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three/four/five$ touch 5.txt 55.txt 555.txt
+sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/one/two/three/four/five$ cd ~
+
+
+
+Q8.  Considering above directory structure , Do following
+operations :
+i. list the directory contents of directory named
+"five" from current directory (i.e. home directory).
+
+Answer: sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~$ ls /home/sunbeam/one/two/three/four/five/
+555.txt  55.txt  5.txt
+
+
+Answer:
+
+
