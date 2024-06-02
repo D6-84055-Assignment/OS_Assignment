@@ -1,0 +1,87 @@
+Q1.
+Create a file named "data.txt" and write the following lines in it(write as it is).
+Linux is open source.
+In Linux everything is file
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+
+Answer:  sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ vim sush1.txt
+
+
+Q2. compose the commands fulfilled following requirement
+i. count the no. of words ,characters and lines from above 2 file.(man wc)
+ii. list the lines having word "files" (man grep)
+iii. list the lines having word "file" (man grep)
+iv. list the lines which don't have word "files" (man grep)
+v. list the lines having word "have" . (man grep)
+vi. list the lines starts with letter "f" (man grep)
+vii. list the lines ends with "." (man grep)
+viii. list only first two lines.(man head)
+ix. list only last three lines.(man tail)
+x. list line no.3,4 and 5 . (man head and tail)
+
+Answer: 
+i.  sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ wc sush1.txt
+6  25 144 sush1.txt
+
+ii.  sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ grep files sush1.txt
+files have permissions.
+files have inode no.
+files have size.
+
+iii. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ grep files sush1.txt
+files have permissions.
+files have inode no.
+files have size.
+
+iv. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ grep -v "files" sush1.txt
+Linux is open source.
+In Linux everything is file
+there are several types of file
+
+v. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ grep "have" sush1.txt
+files have permissions.
+files have inode no.
+files have size.
+
+vi. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ grep "^f" sush1.txt
+files have permissions.
+files have inode no.
+files have size.
+
+vii. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ grep "\.$" sush1.txt
+Linux is open source.
+files have permissions.
+files have inode no.
+files have size.
+
+viii. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ head -2 sush1.txt
+Linux is open source.
+In Linux everything is file
+
+ix. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ tail -n 3 sush1.txt
+files have inode no.
+files have size.
+there are several types of file
+
+x. sunbeam@sunbeam-ASUS-TUF-Gaming-F15-FX506HF-FX506HF:~/CDAC/os$ head -n 5 sush1.txt | tail -n 3
+files have permissions.
+files have inode no.
+files have size.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
