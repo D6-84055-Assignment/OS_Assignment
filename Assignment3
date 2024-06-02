@@ -1,0 +1,122 @@
+Q1: sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ ls
+    Assignments  day01  OSASSG  OS_Galvin_Slides.pdf  SID1.txt
+
+Q2:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ rename 's/file/newfile/' SID1.txt
+
+Q3:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ ln -s SID1.txt fcc_link.txt
+
+Q4:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ ln -s /home/sunbeam/PG-DAC/os/Assignments/ symlink-file1
+
+Q5: sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ stat -L /etc/localtime
+  File: /etc/localtime
+  Size: 285       	Blocks: 8          IO Block: 4096   regular file
+Device: 809h/2057d	Inode: 6037238     Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2024-05-31 22:53:56.770913388 +0530
+Modify: 2024-02-21 18:20:24.000000000 +0530
+Change: 2024-03-12 15:25:34.801706580 +0530
+ Birth: 2024-03-12 15:25:34.541701474 +0530
+
+Q6: sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ touch -t 201810080730.30 SID1.txt
+
+Q7:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ touch Sid2.txt
+
+Q8: sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ touch Sid2.txt
+
+Q9:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/OSASSG$ tail Assignment1 -n 20
+SHLVL=1
+NVM_CD_FLAGS=
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+PATH=/home/sunbeam/.nvm/versions/node/v20.12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+NVM_BIN=/home/sunbeam/.nvm/versions/node/v20.12.2/bin
+_=/usr/bin/env
+OLDPWD=/home/sunbeam/PG-DAC/os
+sunbeam@s
+
+Q10:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/OSASSG$ sudo shutdown +30
+[sudo] password for sunbeam: 
+Shutdown scheduled for Sat 2024-06-01 19:33:12 IST, use 'shutdown -c' to cancel.
+
+Q11:sunbeam@sunbeam-HP-EliteBook-840-G3:~$ whoami
+sunbeam
+
+Q12:sunbeam@sunbeam-HP-EliteBook-840-G3:~$ tty
+/dev/pts/0
+
+Q13: sunbeam@sunbeam-HP-EliteBook-840-G3:~$ users
+sunbeam
+
+Q14:sunbeam@sunbeam-HP-EliteBook-840-G3:~$ who
+sunbeam  tty2         2024-05-31 22:52 (tty2)
+
+Q15:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/OS_Assignment$ grep "is" Assignment1
+tnemngissA so elasohB tnahddiS
+ 1 on tnemngissa
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+
+Q16: sunbeam@sunbeam-HP-EliteBook-840-G3:~$ chmod +r SID1.txt
+
+Q17: sunbeam@sunbeam-HP-EliteBook-840-G3:~$ chmod u+rwx SID1.txt
+
+Q18:sunbeam@sunbeam-HP-EliteBook-840-G3:~$ init 1
+
+Q19:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/OS_Assignment$ wc Assignment3
+  69  163 2495 Assignment3
+
+Q20:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/OS_Assignment$ who | wc -w
+5
+
+Q21:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/OS_Assignment$ head -n 10 Assignment3 | tail -n +5
+
+     Q3:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ ln -s SID1.txt fcc_link.txt
+
+     Q4:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ ln -s /home/sunbeam/PG-DAC/os/Assignments/ symlink-file1
+
+     Q5: sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os$ stat -L /etc/localtime
+
+Q22:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/day02$ sort big.txt | uniq
+bag
+beg
+b*g
+bg
+big
+bog
+bug
+hello
+
+
+
+Q23: sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/day02$ who, grep (using pipe)Display all users not using tty2, tty3, tty4
+
+
+Q24: ls -l | sort -n -k 5 | awk '{print $9}'
+
+
+Q25: sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/day02$ ls -l | grep ^- | wc -l
+    34
+    
+Q26:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/day02$ ls -a | grep '^\.'
+.
+..
+
+
+Q27:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/day02$ tr '[:lower:]' '[:upper:]' < big.txt > classwork.txt
+
+Q28:sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/day02$ cut -d',' -f1,3 classwork.txt
+BAG
+BEG
+BIG
+BUG
+BOG
+B*G
+BG
+HELLO
+
+
+
+
+
