@@ -1,0 +1,324 @@
+Q1: unbeam@sunbeam-HP-EliteBook-840-G3:~$ #!/bin/bash
+
+# Display login name
+echo "Your login name is: $USER"
+
+# Display home directory
+echo "Your home directory is: $HOME"
+Your login name is: sunbeam
+Your home directory is: /home/sunbeam
+
+
+Q2: #!/bin/bash
+
+# Display menu
+echo "Menu:"
+echo "1. Date"
+echo "2. Cal"
+echo "3. Ls"
+echo "4. Pwd"
+echo "5. Exit"
+
+# Prompt for user input
+read -p "Enter your choice: " choice
+
+# Execute command based on user choice
+case $choice in
+    1) # Date
+        date ;;
+    2) # Cal
+        cal ;;
+    3) # Ls
+        ls ;;
+    4) # Pwd
+        pwd ;;
+    5) # Exit
+        echo "Exiting..."
+        exit ;;
+    *) # Invalid choice
+        echo "Invalid choice" ;;
+esac
+
+
+Q3:  #!/bin/bash
+
+# Prompt the user to enter a name
+read -p "Enter a name: " name
+
+# Check if the entered name exists
+if [ -e "$name" ]; then
+    # Check if the entered name is a file
+    if [ -f "$name" ]; then
+        echo "$name is a file."
+        # Display the size of the file
+        echo "Size of $name: $(stat -c%s "$name") bytes."
+    # Check if the entered name is a directory
+    elif [ -d "$name" ]; then
+        echo "$name is a directory."
+        # Display the contents of the directory
+        echo "Contents of $name:"
+        ls "$name"
+    else
+        echo "$name exists but is neither a file nor a directory."
+    fi
+else
+    echo "$name does not exist."
+fi
+
+
+Q4:  #!/bin/bash
+
+# Function to check if a number is prime
+is_prime() {
+    local num=$1
+    if [ $num -le 1 ]; then
+        echo "$num is not a prime number."
+        return
+    fi
+
+    
+    for (( i=2; i*i<=$num; i++ )); do
+        if [ $((num % i)) -eq 0 ]; then
+            echo "$num is not a prime number."
+            return
+        fi
+    done
+
+    echo "$num is a prime number."
+}
+
+read -p "Enter a number: " number
+
+# Call the function to check if the number is prime
+is_prime $number
+
+
+
+Q5: #!/bin/bash
+
+# Function to find the greatest of three numbers
+find_greatest() {
+    local a=$1
+    local b=$2
+    local c=$3
+
+    if [ $a -gt $b ] && [ $a -gt $c ]; then
+        echo "$a is the greatest."
+    elif [ $b -gt $a ] && [ $b -gt $c ]; then
+        echo "$b is the greatest."
+    else
+        echo "$c is the greatest."
+    fi
+}
+
+
+read -p "Enter the first number: " num1
+read -p "Enter the second number: " num2
+read -p "Enter the third number: " num3
+
+
+find_greatest $num1 $num2 $num3
+
+
+
+Q6:echo -n "enter year: "
+read y
+
+# condition: y % 4 == 0 && y % 100 != 0 || y % 400 == 0
+if [ `expr $y % 4` -eq 0 -a `expr $y % 100` -ne 0 -o `expr $y % 400` -eq 0 ]
+then
+	echo "Leap Year"
+else
+	echo "Not Leap Year"
+fi
+
+
+
+Q7:  #!/bin/bash
+
+
+read -p "Enter a number: " number
+
+if [[ $number -gt 0 ]]; then
+  echo "The number $number is positive."
+elif [[ $number -lt 0 ]]; then
+  echo "The number $number is negative."
+else
+  echo "The number $number is zero."
+fi
+Enter a number: 55
+The number 55 is positive.
+
+
+
+
+
+Q8:  sunbeam@sunbeam-HP-EliteBook-840-G3:~$ echo -n "enter a number: "
+read num
+
+i=1
+while [ $i -le 10 ]
+do
+        res=`expr $num \* $i`
+        echo "while -- $num * $i = $res"
+        i=`expr $i + 1`
+done
+
+enter a number: 5
+while -- 5 * 1 = 5
+while -- 5 * 2 = 10
+while -- 5 * 3 = 15
+while -- 5 * 4 = 20
+while -- 5 * 5 = 25
+while -- 5 * 6 = 30
+while -- 5 * 7 = 35
+while -- 5 * 8 = 40
+while -- 5 * 9 = 45
+while -- 5 * 10 = 50
+
+
+
+
+Q9:
+# Function to calculate factorial
+function factorial() {
+                            
+                         
+                                                         
+                                                               
+  if [[ $1 -eq 0 ]]; then
+    return 0  # Exit the function with a success code (zero)
+  fi                                                        
+                                                            
+                                                            
+  result=1
+  for (( i=1; i<=$1; i++ )); do
+    result=$(( result * i ))
+  done                      
+  echo $result              
+}                           
+              
+              
+read -p "Enter a number: " number
+                                              
+factorial_result=$(factorial $number)         
+                                              
+if [[ $? -ne 0 ]]; then              
+                                                  
+  exit 1                             
+fi        
+
+
+Q10:  sunbeam@sunbeam-HP-EliteBook-840-G3:~$ function fibo()
+{
+        count=$1
+        a=0
+        b=1
+        for((i=1; i<=$count; i++))
+        do
+                echo -n "$a "
+                c=`expr $a + $b`
+                a=$b
+                b=$c
+        done
+        echo -e -n "\n"
+}
+
+fibo 5
+result=$(fibo 15)
+echo "Fibo Terms: $result"
+0 1 1 2 3 
+Fibo Terms: 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 
+
+
+Q13:  sunbeam@sunbeam-HP-EliteBook-840-G3:~$ #!/bin/bash
+
+                                                                                                                     
+ls -A | grep "^\."
+.bash_history
+.bash_logout
+.bashrc
+.cache
+.config
+.dotnet
+.gitconfig
+.gnupg
+.lesshst
+.local
+.mongodb
+.mozilla
+.my.cnf
+.mysql_history
+.npm
+.nvm
+.pki
+.profile
+.ssh
+.sudo_as_admin_successful
+.thunderbird
+.vscode
+.yarn
+.yarnrc
+
+
+Q14: sunbeam@sunbeam-HP-EliteBook-840-G3:~$ #!/bin/bash
+
+                                                                                                   
+find . -maxdepth 1 -type f -executable -print
+./SID1.txt
+
+
+Q16:  sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG-DAC/os/OSASSG$ #!/bin/bash
+
+# Get username
+username=$(whoami)
+
+# Display welcome message
+echo "Welcome back, $username!"
+
+# Display home directory contents (excluding hidden files)
+ls -l ~ | grep -v "^\."
+
+# Additional message (optional)
+echo "Remember to check your hidden files if needed (files starting with a dot)."
+Welcome back, sunbeam!
+total 76832
+drwxrwxr-x   2 sunbeam sunbeam     4096 Jun  1 17:33 bw
+drwxrwxr-x   2 sunbeam sunbeam     4096 Jun  1 17:21 copy1.txt
+drwxr-xr-x   2 sunbeam sunbeam     4096 Jun  3 15:45 Desktop
+drwxr-xr-x   3 sunbeam sunbeam     4096 Mar 30 16:45 Documents
+drwxr-xr-x   5 sunbeam sunbeam     4096 Jun  3 14:08 Downloads
+drwxrwxr-x   4 sunbeam sunbeam     4096 Apr 20 08:26 Hackathon
+drwxr-xr-x   2 sunbeam sunbeam     4096 Mar  8 01:22 Music
+drwxrwxr-x 126 sunbeam sunbeam     4096 Apr 20 15:05 node_modules
+-rw-rw-r--   1 sunbeam sunbeam      317 Apr 20 15:05 package.json
+drwxrwxr-x  12 sunbeam sunbeam     4096 Jun  1 18:16 PG-DAC
+drwxr-xr-x   4 sunbeam sunbeam     4096 Apr  9 18:16 Pictures
+drwxr-xr-x   2 sunbeam sunbeam     4096 Mar  8 01:22 Public
+-rwxrw-r--   1 sunbeam sunbeam       57 May 31 19:05 SID1.txt
+drwx------   6 sunbeam sunbeam     4096 Apr 15 15:32 snap
+drwxrwxr-x   5 sunbeam sunbeam     4096 Apr 20 18:29 sush
+drwxr-xr-x   2 sunbeam sunbeam     4096 Mar  8 01:22 Templates
+drwxr-xr-x   2 sunbeam sunbeam     4096 Mar  8 01:22 Videos
+drwxrwxr-x   3 sunbeam sunbeam     4096 Apr 19 17:02 wpt<240344220199>
+-rw-rw-r--   1 sunbeam sunbeam 78555966 May 15 14:45 wpt<240344220199>.zip
+-rw-rw-r--   1 sunbeam sunbeam    39801 Apr 20 15:05 yarn.lock
+Remember to check your hidden files if needed (files starting with a dot).
+sunbeam@sunbeam-HP-EliteBook-840-G3:~/PG
+
+Q17: rows=5
+
+for ((i=1; i<=rows; i++)); do
+  # Print stars for each row based on the current row number (i)
+  for ((j=1; j<=i; j++)); do
+    echo -n "*"
+  done
+  # Add a newline after each row
+  echo
+done
+
+
+
+
+
+ 
